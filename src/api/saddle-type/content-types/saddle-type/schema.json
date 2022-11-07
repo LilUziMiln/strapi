@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "saddle_types",
+  "info": {
+    "singularName": "saddle-type",
+    "pluralName": "saddle-types",
+    "displayName": "SaddleType",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Type": {
+      "type": "json"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order",
+      "mappedBy": "saddle_type"
+    },
+    "Name": {
+      "type": "string"
+    }
+  }
+}

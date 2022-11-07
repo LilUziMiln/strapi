@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "saddle_fitter_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "orders"
+    },
+    "saddle_type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::saddle-type.saddle-type",
+      "inversedBy": "orders"
+    },
+    "order_status": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::orderstatus.orderstatus",
+      "inversedBy": "orders"
+    },
+    "order_attributes": {
+      "type": "json"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "newletters",
+  "info": {
+    "singularName": "newletter",
+    "pluralName": "newletters",
+    "displayName": "Newsletter",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "short_form": {
+      "type": "text"
+    },
+    "long_form": {
+      "type": "text"
+    },
+    "file": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
