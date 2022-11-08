@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "newletters",
+  "collectionName": "newsletters",
   "info": {
-    "singularName": "newletter",
-    "pluralName": "newletters",
-    "displayName": "Newsletter",
-    "description": ""
+    "singularName": "newsletter",
+    "pluralName": "newsletters",
+    "displayName": "Newsletter"
   },
   "options": {
     "draftAndPublish": true
@@ -16,21 +15,20 @@
       "type": "string"
     },
     "short_form": {
-      "type": "text"
+      "type": "string"
     },
     "long_form": {
-      "type": "text"
+      "type": "richtext"
     },
     "file": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }

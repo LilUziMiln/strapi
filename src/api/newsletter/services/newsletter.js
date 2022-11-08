@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * newletter service
+ * newsletter service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::newletter.newletter');
+module.exports = createCoreService('api::newsletter.newsletter');

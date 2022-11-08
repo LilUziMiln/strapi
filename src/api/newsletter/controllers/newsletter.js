@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * newletter controller
+ * newsletter controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::newletter.newletter');
+module.exports = createCoreController('api::newsletter.newsletter');
