@@ -4,7 +4,7 @@
   "info": {
     "singularName": "saddle-type",
     "pluralName": "saddle-types",
-    "displayName": "SaddleType",
+    "displayName": "Saddles",
     "description": ""
   },
   "options": {
@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Type": {
-      "type": "json"
-    },
     "orders": {
       "type": "relation",
       "relation": "oneToMany",
@@ -23,6 +20,21 @@
     },
     "Name": {
       "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Attributes": {
+      "type": "json"
+    },
+    "saddleFitter": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "saddles"
+    },
+    "basePrice": {
+      "type": "decimal"
     }
   }
 }

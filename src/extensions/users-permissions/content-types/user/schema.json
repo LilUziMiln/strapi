@@ -85,6 +85,12 @@
     },
     "is_subscribed": {
       "type": "boolean"
+    },
+    "saddles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::saddle-type.saddle-type",
+      "mappedBy": "saddleFitter"
     }
   }
 }
