@@ -63,10 +63,10 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "Type": {
+    "type": {
       "type": "string"
     },
-    "ProfilePicture": {
+    "profilePicture": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -77,19 +77,19 @@
         "audios"
       ]
     },
+    "isSubscribed": {
+      "type": "boolean"
+    },
     "orders": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::order.order",
-      "mappedBy": "saddle_fitter_id"
+      "mappedBy": "saddleFitter"
     },
-    "is_subscribed": {
-      "type": "boolean"
-    },
-    "saddles": {
+    "saddles2": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::saddle-type.saddle-type",
+      "target": "api::saddle.saddle",
       "mappedBy": "saddleFitter"
     }
   }

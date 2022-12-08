@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * saddle-type router
+ * saddle router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::saddle-type.saddle-type');
+module.exports = createCoreRouter('api::saddle.saddle');

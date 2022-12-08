@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "saddles",
+  "info": {
+    "singularName": "saddle",
+    "pluralName": "saddles",
+    "displayName": "Saddles",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "attributes": {
+      "type": "json"
+    },
+    "basePrice": {
+      "type": "decimal"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order",
+      "mappedBy": "saddle"
+    },
+    "saddleFitter": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "saddles2"
+    }
+  }
+}

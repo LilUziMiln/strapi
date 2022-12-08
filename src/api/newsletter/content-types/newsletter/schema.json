@@ -4,7 +4,8 @@
   "info": {
     "singularName": "newsletter",
     "pluralName": "newsletters",
-    "displayName": "Newsletter"
+    "displayName": "Newsletter",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,21 +15,22 @@
     "title": {
       "type": "string"
     },
-    "short_form": {
+    "shortForm": {
       "type": "string"
     },
-    "long_form": {
+    "longForm": {
       "type": "richtext"
     },
-    "file": {
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     }
   }
 }

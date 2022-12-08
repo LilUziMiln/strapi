@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * saddle-type service
+ * saddle service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::saddle-type.saddle-type');
+module.exports = createCoreService('api::saddle.saddle');

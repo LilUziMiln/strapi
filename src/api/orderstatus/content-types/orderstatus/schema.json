@@ -4,24 +4,25 @@
   "info": {
     "singularName": "orderstatus",
     "pluralName": "orderstatuses",
-    "displayName": "Orderstatus"
+    "displayName": "Orderstatus",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "status_name": {
+    "statusName": {
       "type": "string"
     },
-    "status_level": {
+    "statusLevel": {
       "type": "integer"
     },
     "orders": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::order.order",
-      "mappedBy": "order_status"
+      "mappedBy": "orderStatus"
     }
   }
 }
