@@ -86,7 +86,7 @@
       "target": "api::order.order",
       "mappedBy": "saddleFitter"
     },
-    "saddles2": {
+    "saddles": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::saddle.saddle",
