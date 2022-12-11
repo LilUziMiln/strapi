@@ -8,10 +8,11 @@ const { createCoreService } = require('@strapi/strapi').factories;
 
 module.exports = createCoreService('api::order.order', ({ strapi }) => ({
   async stats(userId) {
+    console.log(userId);
     let result = {};
     const entries = await strapi.entityService.findMany('api::order.order', {
       filters: {
-        saddle_fitter_id: {
+        saddleFitter: {
           id: userId,
         },
       },
@@ -35,17 +36,17 @@ async function statusData(userId, statuses) {
       'api::order.order',
       {
         filters: {
-          saddle_fitter_id: {
+          saddleFitter: {
             id: userId,
           },
-          order_status: {
+          orderStatus: {
             id: statuses[i].id,
           },
         },
       }
     );
 
-    data[statuses[i].status_name] = orderByStatus.length;
+    data[statuses[i].statusName] = orderByStatus.length;
   }
 
   return data;
